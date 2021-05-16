@@ -10,7 +10,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @Path("/hello")
 public class GreetingResource {
 
-    @ConfigProperty(name="greetings.message");
+    @ConfigProperty(name = "greetings.message")
     String msg;
 
     @GET
