@@ -1,5 +1,8 @@
 package org.acme.getting.started;
 
+import java.time.LocalDate;
+
+import javax.json.bind.annotation.JsonbDateFormat;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -19,6 +22,14 @@ public class Beer {
     // MIN() que el valor mínimo sea de 100
     @Min(100)
     private int capacity;
+
+    /* 
+    * Custom Validator: Create a custom validate to validate a localDate property's expired
+    With: @JsonbDateFormat -> This annotation help us to set a format of the LocalDate when the object Beer it's serializable
+    */
+
+    @JsonbDateFormat("yyyy-MM-dd")
+    private LocalDate expired;
 
 
     public Beer() {
