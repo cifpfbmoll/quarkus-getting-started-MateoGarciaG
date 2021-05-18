@@ -1,6 +1,7 @@
 package org.acme.getting.started;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -32,9 +33,10 @@ public class GreetingResource {
     // Consumes: Consume los recursos provenientes del endpoint. Esto es simplemente para indicarle que este método es para consumir los recursos que se insertan en este Recurso Endpoint
     // CURL POST: curl -d '{"name":"Alhambra", "capacity":500}' -H "Content-Type: application/json" -X POST http://localhost:8080/hello
     // MediaType
+    // @Valid: Nos permite indicarle que el objeto que entrá dentro del método a travez de los datos/recursos que vienen del endpoint sean VALIDOS, como por ejemplo que sus tipos sean los correctos. Si no es valida, enviará una Bad Request, incluso @Valid chequeará que dentro de la Clase Beer tenga @anotaciones de validación como por ejemplo @Min(100)
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response createBeer(Beer beer) {
+    public Response createBeer(@Valid Beer beer) {
         System.out.println(beer);
         // Status Code 200: ok().build()
         return Response.ok().build();
