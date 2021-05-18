@@ -13,9 +13,15 @@ public class GreetingResource {
     @ConfigProperty(name = "greetings.message")
     String msg;
 
+    /* 
+    * Inyectamos el objeto GreetingsService
+    */
+    GreetingService service;
+
+
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return msg;
+        return service.toUpperCase(msg);
     }
 }
