@@ -8,6 +8,10 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class Beer {
+
+    /* 
+    En QUARKUS no podemos usar reflection, por lo cual si tenemos un atributo privado, y no tienen GETTER o SETTER pues no vamos a poder asignarle un valor o actualizarlo
+    */
     
     /* 
     * Ahora que tengo instalada el: Hibernate-Validotors. Puedo usar anotaciones de Validación
@@ -28,6 +32,10 @@ public class Beer {
     With: @JsonbDateFormat -> This annotation help us to set a format of the LocalDate when the object Beer it's serializable
     */
 
+    // Utlizamos el @NotExpired Que hemos creado
+    // Y hacemos el siguiente CURL
+    // curl -d '{"name":"Alhambra", "capacity":500, "expired":"2021-10-01"}' -H "Content-Type: application/json" -X POST http://localhost:8080/hello
+    @NotExpired
     @JsonbDateFormat("yyyy-MM-dd")
     private LocalDate expired;
 
@@ -60,13 +68,25 @@ public class Beer {
     }
 
 
+    public LocalDate getExpired() {
+        return this.expired;
+    }
+
+    public void setExpired(LocalDate expired) {
+        this.expired = expired;
+    }
+
+
+
     @Override
     public String toString() {
-        return "Beer: {" +
+        return "{" +
             " name='" + getName() + "'" +
             ", capacity='" + getCapacity() + "'" +
+            ", expired='" + getExpired() + "'" +
             "}";
     }
+
 
 
 }

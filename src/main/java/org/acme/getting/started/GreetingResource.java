@@ -34,6 +34,11 @@ public class GreetingResource {
     // CURL POST: curl -d '{"name":"Alhambra", "capacity":500}' -H "Content-Type: application/json" -X POST http://localhost:8080/hello
     // MediaType
     // @Valid: Nos permite indicarle que el objeto que entrá dentro del método a travez de los datos/recursos que vienen del endpoint sean VALIDOS, como por ejemplo que sus tipos sean los correctos. Si no es valida, enviará una Bad Request, incluso @Valid chequeará que dentro de la Clase Beer tenga @anotaciones de validación como por ejemplo @Min(100)
+
+    // @NotExpired Add. Use Now: 
+    // Beer Not Expired: curl -d '{"name":"Alhambra", "capacity":500, "expired":"2022-10-01"}' -H "Content-Type: application/json" -X POST http://localhost:8080/hello
+    // Beer Expired: curl -d '{"name":"Alhambra", "capacity":500, "expired":"2019-07-01"}' -H "Content-Type: application/json" -X POST http://localhost:8080/hello
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createBeer(@Valid Beer beer) {

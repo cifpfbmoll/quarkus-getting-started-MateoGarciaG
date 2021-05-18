@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 
 // @Contraint: Indicarle por cual Validator Class que hemos creado se rige está anotación para determinar si es valido o no.
 
-@Target({ ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER, ElementType.TYPE_USE })
+@Target({ ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Constraint(validatedBy = {NotExpiredValidator.class})
