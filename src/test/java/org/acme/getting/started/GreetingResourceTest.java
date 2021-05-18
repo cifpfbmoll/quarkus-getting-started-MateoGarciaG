@@ -11,11 +11,28 @@ public class GreetingResourceTest {
 
     @Test
     public void testHelloEndpoint() {
+
+        // MODO DEVELOPMENT ENVIRONMENT
+        // given()
+        //     .when().get("/hello")
+        //     .then()
+        //         .statusCode(200)
+        //         .body(is("HolaDevelop"));
+
+        // MODO PRODUCTION ENVIRONMENT
+        // given()
+        //     .when().get("/hello")
+        //     .then()
+        //         .statusCode(200)
+        //         .body(is("Hola Mundo"));
+
+        // MODO STAGING ENVIRONMENT
         given()
-          .when().get("/C:/Program Files/Git/hello")
-          .then()
-             .statusCode(200)
-             .body(is("Hello RESTEasy"));
+            .when().get("/hello")
+            .then()
+                .statusCode(200)
+                .body(is("Aloha"));
+
     }
 
 }
