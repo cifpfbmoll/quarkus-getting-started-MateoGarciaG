@@ -1,5 +1,6 @@
 package org.acme.getting.started;
 
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -16,6 +17,7 @@ public class GreetingResource {
     /* 
     * Inyectamos el objeto GreetingsService
     */
+    @Inject
     GreetingService service;
 
 
