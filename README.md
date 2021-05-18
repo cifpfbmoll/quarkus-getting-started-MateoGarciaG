@@ -1,4 +1,102 @@
-# getting-started project
+# Quarkus-First-Project
+## Getting Started
+Wellcome to my First Project with the Quarkus FrameWork related to Java. This project is a "getting started" where I put the things that I've been learning about the tutorials of Quarkus.
+
+## Guides that I Followed:
+https://quarkus.io/guides/getting-started
+https://quarkus.io/guides/building-native-image
+
+
+[![status application](https://img.shields.io/badge/status-stable-brightgreen)](URL_Proyecto)
+
+<!--Logos-->
+
+<br>
+
+<img src="./doc/img/quarkus-logo.png" width="180px">
+
+<br>
+
+<img src="./doc/img/java.png" width="180px">
+
+<br>
+
+<img src="./doc/img/apache_maven.png" width="180px">
+
+<br>
+
+<img src="./doc/img/logocifp.png" width="180px">
+
+
+## Tabla de Contenidos
+
+1. [Tecnologías Usadas](#tecnologias-usadas)
+1. [Reflexiones](#reflexiones)
+1. [Licencia](#licencia)
+1. [Detalles Quarkus](#detalles-quarkus)
+
+---
+
+## Tecnologías Usadas
+
+- Java JDK 11
+- Maven
+- Visual Studio Code
+- IntelliJ
+- Git
+- Docker
+- Quarkus
+
+
+
+**[⬆ back to top](#tabla-de-contenidos)**
+
+
+---
+
+## Reflexiones
+### Que has mejorado con este proyecto?
+This project has let me to learn a new Java Framework and its advantages into how to optimize the development in Java, where the compilation, creation of a native executable and the se of docker where the points that I liked. How the type of projects of Quarkus let us to create a differents type of projects focused on API REST, Serverless and even the use of Kubernetes.
+
+
+**[⬆ back to top](#tabla-de-contenidos)**
+
+
+---
+
+
+
+## Licencia
+
+MIT License
+
+Copyright (c) 2021 Mateo Garcia Gonzalez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+
+**[⬆ back to top](#tabla-de-contenidos)**
+
+---
+
+
+## Autor
+Mateo Garcia Gonzalez
+
+
+
+---
+
+# Detalles Quarkus
+## getting-started project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
@@ -36,6 +134,7 @@ You can create a native executable using:
 ./mvnw package -Pnative
 ```
 
+## TIP Creating a native executable
 Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
 ```shell script
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
@@ -52,3 +151,7 @@ If you want to learn more about building native executables, please consult http
 REST is easy peasy with this Hello World RESTEasy resource.
 
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+
+**[⬆ back to top](#tabla-de-contenidos)**
+
+---
