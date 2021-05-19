@@ -5,7 +5,10 @@ Wellcome to my First Project with the Quarkus FrameWork related to Java. This pr
 ## Guides that I Followed:
 https://quarkus.io/guides/getting-started
 https://quarkus.io/guides/building-native-image
+And and OpenWebinas Course about Quarkus.
 
+## Dedicated Time to Quarkus:
+I have been watched and develop all steps from OpenWebinars Course and followed the guide until the video: "Validaciones Propias". You can check all I've been done in Commit History.
 
 [![status application](https://img.shields.io/badge/status-stable-brightgreen)](URL_Proyecto)
 
