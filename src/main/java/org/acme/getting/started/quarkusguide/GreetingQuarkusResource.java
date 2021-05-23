@@ -12,7 +12,7 @@ import org.jboss.resteasy.annotations.jaxrs.PathParam;
 class GreetingQuarkusResource {
 
     @Inject
-    GreetingService service;
+    GreetingQuarkusService service;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
