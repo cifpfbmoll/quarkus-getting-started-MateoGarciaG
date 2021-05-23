@@ -10,6 +10,10 @@ And and OpenWebinas Course about Quarkus.
 ## Dedicated Time to Quarkus:
 I have been watched and develop all steps from OpenWebinars Course and followed the guide until the video: "Validaciones Propias". You can check all I've been done in Commit History.
 
+## Dedicated Time to Quarkus Guide:
+I've finished Tutorial from Quarkus of: "Creating your first application" from this guide: https://quarkus.io/guides/getting-started#the-jax-rs-resources
+
+
 [![status application](https://img.shields.io/badge/status-stable-brightgreen)](URL_Proyecto)
 
 <!--Logos-->
