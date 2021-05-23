@@ -37,7 +37,7 @@ public class Beer {
     // curl -d '{"name":"Alhambra", "capacity":500, "expired":"2021-10-01"}' -H "Content-Type: application/json" -X POST http://localhost:8080/hello
     @NotExpired
     @JsonbDateFormat("yyyy-MM-dd")
-    private LocalDate expired;
+    private LocalDate expired; 
 
 
     public Beer() {
