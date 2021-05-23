@@ -14,6 +14,8 @@ class GreetingQuarkusResource {
     @Inject
     GreetingQuarkusService service;
 
+    // curl -w "\n" http://localhost:8080/hello/greeting/quarkus
+    //hello quarkus
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/greeting/{name}")
